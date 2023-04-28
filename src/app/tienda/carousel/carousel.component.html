@@ -10,8 +10,8 @@
 
     <h1 class="text-center">Carousel</h1>
     <div class="carousel-inner">
-        <div *ngIf="carousel" class="carousel-item">
-            <img [src]="carousel.getImagen()" class="d-block w-100" alt="img">
+        <div *ngFor="let foto of fotos" class="carousel-item">
+            <img [src]="foto.url" class="d-block w-100" alt="{{ foto.alt }}">
         </div>
     </div>
     

@@ -1,6 +1,5 @@
 export interface ICarousel {
-
-    id: number
-    imagen?: string
-    
+    imagen: string;
+    url: string;
+    alt: string;
 }
