@@ -11,6 +11,7 @@ export class CarouselService {
   constructor(private http: HttpClient) { }
 
   public getFotos(): Observable<ICarousel[]> {
-    return this.http.get<ICarousel[]>('http://localhost:3001/carousel');
+    const urlEndPoint: string = 'http://localhost:3001/carousel';
+    return this.http.get<ICarousel[]>(urlEndPoint);
   }
 }

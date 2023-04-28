@@ -11,11 +11,11 @@ export class CarouselComponent implements OnInit {
 
   fotos: ICarousel[] = [];
 
-  constructor(private servicioCarousel: CarouselService){ }
+  constructor(private servicioCarousel: CarouselService) { }
 
   ngOnInit(): void {
-   this.servicioCarousel.getFotos().subscribe((data: ICarousel[]) => {
-    this.fotos = data;
-   })
+    this.servicioCarousel.getFotos().subscribe((data: ICarousel[]) => {
+      this.fotos = data;
+    })
   }
 }
