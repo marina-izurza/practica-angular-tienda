@@ -11,6 +11,8 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
 import { TiendaComponent } from './tienda/tienda.component';
 import { BannersComponent } from './tienda/banners/banners.component';
 import { CategoriasComponent } from './tienda/categorias/categorias.component';
+import { CategoriaComponent } from './tienda/categorias/categoria/categoria.component';
+import { DetalleComponent } from './tienda/categorias/categoria/detalle/detalle.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { CategoriasComponent } from './tienda/categorias/categorias.component';
     NosotrosComponent,
     TiendaComponent,
     BannersComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    CategoriaComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,

@@ -1,26 +1,9 @@
-<h2 class="text-center">Categorías</h2>
+<h2 class="text-center">Shop by Categorie</h2>
 
-<div class="card-group mx-5">
-
-    <div class="card">
-        <img src="..." class="card-img-top" alt="seccion-vestidos">
-        <div class="card-body">
-            <h5 class="card-title">Vestidos</h5>
-        </div>
+<div class="container">
+    <div class="card" style="width: 18rem;" *ngFor="let item of items; let i=index">
+        <img [src]="item.imagen" class="card-img-top" alt="">
+        <p class="card-text">{{ item.descripcion }}</p>
+        <button routerLink="nosotros" type="button" class="btn btn-dark">Shop</button>
     </div>
-
-    <div class="card">
-        <img src="..." class="card-img-top" alt="seccion-sudaderas">
-        <div class="card-body">
-            <h5 class="card-title">Sudaderas</h5>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="..." class="card-img-top" alt="seccion-zapatos">
-        <div class="card-body">
-            <h5 class="card-title">Zapatos</h5>
-        </div>
-    </div>
-
 </div>
