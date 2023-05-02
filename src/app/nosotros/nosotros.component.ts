@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./nosotros.component.scss']
 })
 export class NosotrosComponent {
-
+  
 }

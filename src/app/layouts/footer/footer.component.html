@@ -8,8 +8,12 @@
         </a>
 
         <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Tienda</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Nosotros</a></li>
+            <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                <a class="nav-link" [routerLink]="['']">Tienda</a>
+            </li>
+            <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                <a class="nav-link" [routerLink]="['nosotros']">Nosotros</a>
+            </li>
         </ul>
     </footer>
 </div>

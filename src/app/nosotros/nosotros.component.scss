@@ -1,0 +1,16 @@
+img {
+    height: 400px; /* La altura máxima que quieres para la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    width: 100%; /* Ajusta el ancho de la imagen de acuerdo al contenedor */
+}
+
+p {
+    font-size: 20px;
+    text-align: justify;
+    padding: 30px 200px;
+
+    span {
+        font-size: 50px;
+        font-weight: bold;
+    }
+}
