@@ -1,4 +1,4 @@
-export class Categorias {
+export class Tienda {
 
     private imagen?: string
     private descripcion?: string

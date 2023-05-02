@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BannersService } from './banners.service';
-import { IBanners } from './banners.interface';
+import { ITienda } from '../tienda.interface';
 
 @Component({
   selector: 'app-banners',
@@ -8,12 +8,12 @@ import { IBanners } from './banners.interface';
   styleUrls: ['./banners.component.scss']
 })
 export class BannersComponent implements OnInit{
-  fotos: IBanners[] = [];
+  fotos: ITienda[] = [];
 
   constructor(private servicioBanners: BannersService) { }
 
   ngOnInit(): void {
-    this.servicioBanners.getFotos().subscribe((data: IBanners[]) => {
+    this.servicioBanners.getFotos().subscribe((data: ITienda[]) => {
       this.fotos = data;
     })
   }

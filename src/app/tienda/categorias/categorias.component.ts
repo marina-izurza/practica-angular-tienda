@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CategoriasService } from './categorias.service';
-import { ICategorias } from './categorias.interface';
+import { ITienda } from '../tienda.interface';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-categorias',
@@ -9,13 +10,17 @@ import { ICategorias } from './categorias.interface';
 })
 export class CategoriasComponent {
 
-  items: ICategorias[] = [];
+  items: ITienda[] = [];
 
   constructor(private servicioCategorias: CategoriasService) { }
 
   ngOnInit(): void {
-    this.servicioCategorias.getItems().subscribe((data: ICategorias[]) => {
+    this.servicioCategorias.getItems().subscribe((data: ITienda[]) => {
       this.items = data;
     })
+  }
+
+  public goCategory(id: number): void {
+
   }
 }

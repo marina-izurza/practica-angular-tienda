@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CarouselService } from './carousel.service';
-import { ICarousel } from './carousel.interface';
+import { ITienda } from '../tienda.interface';
 
 @Component({
   selector: 'app-carousel',
@@ -9,12 +9,12 @@ import { ICarousel } from './carousel.interface';
 })
 export class CarouselComponent implements OnInit {
 
-  fotos: ICarousel[] = [];
+  fotos: ITienda[] = [];
 
   constructor(private servicioCarousel: CarouselService) { }
 
   ngOnInit(): void {
-    this.servicioCarousel.getFotos().subscribe((data: ICarousel[]) => {
+    this.servicioCarousel.getFotos().subscribe((data: ITienda[]) => {
       this.fotos = data;
     })
   }
