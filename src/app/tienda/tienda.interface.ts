@@ -1,4 +1,5 @@
 export interface ITienda {
-    imagen: string;
+    id?: number;
+    imagen?: string;
     descripcion?: string;
 }

@@ -1,6 +1,7 @@
-export class Categoria {
-
+export class Articulo {
     private id: number;
+    private nombre: string;
+    private precio: number;
     private descripcion?: string;
     private imagen?: string;
 
@@ -10,6 +11,22 @@ export class Categoria {
 
     public setId(id: number): void {
         this.id = id;
+    }
+
+    public getNombre(): string {
+        return this.nombre;
+    }
+
+    public setNombre(nombre: string): void {
+        this.nombre = nombre;
+    }
+
+    public getPrecio(): number {
+        return this.precio;
+    }
+
+    public setPrecio(precio: number): void {
+        this.precio = precio;
     }
 
     public getDescripcion(): string | undefined {
@@ -30,10 +47,14 @@ export class Categoria {
 
     constructor(
         id: number,
+        nombre: string,
+        precio: number,
         descripcion?: string,
         imagen?: string
     ){
         this.id = id
+        this.nombre = nombre
+        this.precio = precio
         this.descripcion = descripcion
         this.imagen = imagen
     }

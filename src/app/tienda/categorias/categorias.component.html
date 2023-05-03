@@ -4,6 +4,6 @@
     <div class="card" style="width: 18rem;" *ngFor="let item of items; let i=index">
         <img [src]="item.imagen" class="card-img-top" alt="">
         <p class="card-text">{{ item.descripcion }}</p>
-        <button routerLink="categoria" type="button" class="btn btn-dark" (click)="goCategory(1);">Shop</button>
+        <button (click)="goCategoria(item.descripcion)" type="button" class="btn btn-dark">Shop</button>
     </div>
 </div>

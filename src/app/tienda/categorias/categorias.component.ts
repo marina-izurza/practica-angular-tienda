@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CategoriasService } from './categorias.service';
 import { ITienda } from '../tienda.interface';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-categorias',
@@ -11,8 +11,13 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class CategoriasComponent {
 
   items: ITienda[] = [];
+  //id: number = 0;
+  descripcion: string = "";
 
-  constructor(private servicioCategorias: CategoriasService) { }
+  constructor(
+    private servicioCategorias: CategoriasService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.servicioCategorias.getItems().subscribe((data: ITienda[]) => {
@@ -20,7 +25,7 @@ export class CategoriasComponent {
     })
   }
 
-  public goCategory(id: number): void {
-
+  public goCategoria(descripcion: any) {
+    this.router.navigate(['/categoria/' + descripcion]);
   }
 }

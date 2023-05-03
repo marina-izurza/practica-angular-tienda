@@ -11,8 +11,8 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
 import { TiendaComponent } from './tienda/tienda.component';
 import { BannersComponent } from './tienda/banners/banners.component';
 import { CategoriasComponent } from './tienda/categorias/categorias.component';
-import { CategoriaComponent } from './tienda/categorias/categoria/categoria.component';
-import { DetalleComponent } from './tienda/categorias/categoria/detalle/detalle.component';
+import { CategoriaComponent } from './tienda/categoria/categoria.component';
+import { ArticuloComponent } from './tienda/articulo/articulo.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { DetalleComponent } from './tienda/categorias/categoria/detalle/detalle.
     BannersComponent,
     CategoriasComponent,
     CategoriaComponent,
-    DetalleComponent
+    ArticuloComponent
   ],
   imports: [
     BrowserModule,

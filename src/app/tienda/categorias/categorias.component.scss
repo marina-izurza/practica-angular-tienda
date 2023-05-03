@@ -1,5 +1,13 @@
+h2 {
+    margin-top: 7rem;
+    padding-bottom: 2rem;
+}
+
 .container {
+    align-items:center;
     display: flex;
+    justify-content: space-around;
+    margin-bottom: 10rem;
 
     p {
         font-size: 30px;

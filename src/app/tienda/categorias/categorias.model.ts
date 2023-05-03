@@ -1,8 +1,8 @@
-export class Categoria {
+export class Categorias {
 
     private id: number;
-    private descripcion?: string;
-    private imagen?: string;
+    private descripcion: string;
+    private imagen: string;
 
     public getId(): number {
         return this.id;
@@ -30,8 +30,8 @@ export class Categoria {
 
     constructor(
         id: number,
-        descripcion?: string,
-        imagen?: string
+        descripcion: string,
+        imagen: string
     ){
         this.id = id
         this.descripcion = descripcion
