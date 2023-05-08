@@ -1,3 +1,19 @@
 .navbar-nav li.active > a {
     font-weight: bold;
 }
+
+.navbar-nav li {
+    font-size: 18px;
+}
+
+.fa-cart-shopping {
+    cursor: pointer;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.mi-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}

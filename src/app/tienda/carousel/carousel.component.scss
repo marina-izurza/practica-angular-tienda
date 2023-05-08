@@ -1,5 +1,19 @@
 img {
-    height: 600px; /* La altura máxima que quieres para la imagen */
+    height: 500px; /* La altura máxima que quieres para la imagen */
     object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
     width: 100%; /* Ajusta el ancho de la imagen de acuerdo al contenedor */
   }  
+
+.carousel-item {
+  position: relative;
+
+  h1 {
+    cursor: pointer;
+    background-color: antiquewhite;
+    padding: 50px;
+    font-size: 60px;
+    position: absolute;
+    top: 250px;
+    right: 450px;
+  }
+}

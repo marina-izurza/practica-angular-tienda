@@ -1,23 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Articulo } from './articulo.model';
+import { HttpClient } from '@angular/common/http';
+import { Articulo } from '../articulo/articulo.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArticuloService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  public getArticulos(): Articulo[] {
-
-    const nuevosArticulos: Articulo[] = [];
-
-    for (let i = 1; i < 10; i++) {
-      const articulo: Articulo = new Articulo(i,("Articulo->" + i), 120);
-      nuevosArticulos.push(articulo);
-    }
-
-    return nuevosArticulos;
-    
+  public getItems(): Observable<Articulo[]> {
+    const urlEndPoint: string = 'http://localhost:3001/ficha1';
+    return this.http.get<Articulo[]>(urlEndPoint);
   }
 }

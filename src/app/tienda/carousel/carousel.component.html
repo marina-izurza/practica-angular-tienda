@@ -1,7 +1,8 @@
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-        <div class="carousel-item" *ngFor="let foto of fotos; let i=index" [ngClass]="{'active': i==0}">
-            <img [src]="foto.imagen" class="d-block w-100" alt="">
+        <div class="carousel-item" *ngFor="let item of items; let i=index" [ngClass]="{'active': i==0}">
+            <img [src]="item.imagen" class="d-block w-100" alt="">
+            <h1>{{item.descripcion | uppercase}}</h1>
         </div>
     </div>
 </div>

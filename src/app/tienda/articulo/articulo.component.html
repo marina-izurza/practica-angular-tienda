@@ -1,1 +1,28 @@
-<p>articulo works!</p>
+<div class="container" *ngFor="let articulo of articulos">
+    <div class="imagen">
+        <img [src]="articulo.imagen" alt="" width="400px">
+    </div>
+    <div class="detalles">
+        <h2>{{articulo.nombre}}</h2>
+        <p class="sec">Shop from the same collection</p>
+        <p class="sec">No comments</p>
+        <div class="precio">
+            <p>{{articulo.precio | currency:'EUR'}}</p>
+            <p>{{articulo.descripcion | currency:'EUR'}}</p>
+        </div>
+        <hr>
+        <div class="color">
+            <p>Color: Green</p>
+            <img [src]="articulo.imagen" alt="" width="50px">
+        </div>
+        <div class="tallas">
+            <p>Size: Choose size</p>
+            <img [src]="articulo.tallas" alt="conjunto tallas" width="300px">
+            <p class="sec">Sizes guide</p>
+        </div>
+        <div class="botones">
+            <a class="btn btn-lg btn-dark p-3">Add to the cart</a>
+        </div>
+        <p class="pt-3 sec">Add to the wishlist</p>
+    </div>
+</div>

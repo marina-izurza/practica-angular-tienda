@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { Articulo } from '../articulo/articulo.model';
-import { ArticuloService } from '../articulo/articulo.service';
+import { CategoriaService } from './categoria.service';
+
 
 @Component({
   selector: 'app-categoria',
@@ -10,28 +11,41 @@ import { ArticuloService } from '../articulo/articulo.service';
   styleUrls: ['./categoria.component.scss']
 })
 
-export class CategoriaComponent implements OnInit{
+export class CategoriaComponent implements OnInit {
 
   articulos: Articulo[] = [];
   idCategoria?: any;
+  idArticulo?: any;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private articuloService: ArticuloService
+    private categoriaService: CategoriaService
   ) { }
 
   ngOnInit(): void {
-    this.getParams();
-    this.articulos = this.articuloService.getArticulos();
+    this.getCategoria();
+    this.getArticulos();
   }
 
-  
-  getParams() {
+  private getArticulos(): void {
+    this.categoriaService.getItems().subscribe({
+      next: (articulosRequest) => { this.articulos = articulosRequest },
+      error: (err) => { this.gestionError(err); }
+    })
+  }
+
+  private gestionError(err: any) {
+    console.log(err);
+  }
+
+  //Nos da el nombre de la categoria
+  public getCategoria() {
     this.idCategoria = this.route.snapshot.paramMap.get('idCategoria');
   }
 
-  public goArticulo(idCategoria: number): void {
-    this.router.navigate(['articulo', idCategoria]);
+  //Redirige al usuario a la ruta específica
+  public goArticulo(idArticulo: number): void {
+    this.router.navigate(['articulo', idArticulo]);
   }
 }

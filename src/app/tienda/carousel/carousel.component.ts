@@ -9,13 +9,14 @@ import { ITienda } from '../tienda.interface';
 })
 export class CarouselComponent implements OnInit {
 
-  fotos: ITienda[] = [];
+  items: ITienda[] = [];
+  descripcion: string = "";
 
   constructor(private servicioCarousel: CarouselService) { }
 
   ngOnInit(): void {
     this.servicioCarousel.getFotos().subscribe((data: ITienda[]) => {
-      this.fotos = data;
+      this.items = data;
     })
   }
 }

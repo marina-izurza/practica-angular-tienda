@@ -1,6 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { CurrencyPipe } from '@angular/common';
+import { UpperCasePipe } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,7 +34,10 @@ import { ArticuloComponent } from './tienda/articulo/articulo.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    CurrencyPipe,
+    UpperCasePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

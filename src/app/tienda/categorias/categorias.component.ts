@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 export class CategoriasComponent {
 
   items: ITienda[] = [];
-  //id: number = 0;
   descripcion: string = "";
 
   constructor(
