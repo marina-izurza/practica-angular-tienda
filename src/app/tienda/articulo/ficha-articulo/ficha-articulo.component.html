@@ -1,23 +1,26 @@
-<div class="container" *ngFor="let articulo of articulos">
+
+<p>Identificador de artículo: {{idArticulo}}</p>
+
+<div class="container" *ngFor="let art of articulo">
     <div class="imagen">
-        <img [src]="articulo.imagen" alt="" width="400px">
+        <img [src]="art.imagen" alt="" width="400px">
     </div>
     <div class="detalles">
-        <h2>{{articulo.nombre}}</h2>
+        <h2>{{art.nombre}}</h2>
         <p class="sec">Shop from the same collection</p>
         <p class="sec">No comments</p>
         <div class="precio">
-            <p>{{articulo.precio | currency:'EUR'}}</p>
-            <p>{{articulo.descripcion | currency:'EUR'}}</p>
+            <p class="rebaja">{{art.precio| currency:'EUR'}}</p>
+            <p>{{art.descripcion| currency:'EUR'}}</p>
         </div>
         <hr>
         <div class="color">
             <p>Color: Green</p>
-            <img [src]="articulo.imagen" alt="" width="50px">
+            <img [src]="art.imagen" alt="" width="50px">
         </div>
         <div class="tallas">
             <p>Size: Choose size</p>
-            <img [src]="articulo.tallas" alt="conjunto tallas" width="300px">
+            <img [src]="art.tallas" alt="conjunto tallas" width="300px">
             <p class="sec">Sizes guide</p>
         </div>
         <div class="botones">

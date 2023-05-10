@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="col">
+        <div class="card" style="width: 18rem;" *ngIf="articulo">
+            <img [src]="articulo.getFav()" class="heart" alt="heart">
+            <img [src]="articulo.getImagen()" class="card-img-top" alt="imagen producto">
+            <div class="card-body">
+                <h5 class="card-title">{{articulo.getNombre()}}</h5>
+                <div class="precios">
+                    <p class="card-text">{{articulo.getDescripcion() | currency:'EUR'}}</p>
+                    <p class="card-text">{{articulo.getPrecio() | currency:'EUR'}}</p>
+                </div>
+                <a class="btn btn-primary" (click)="pulsarBoton()">{{ boton }}</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -13,8 +13,9 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
 import { TiendaComponent } from './tienda/tienda.component';
 import { BannersComponent } from './tienda/banners/banners.component';
 import { CategoriasComponent } from './tienda/categorias/categorias.component';
-import { CategoriaComponent } from './tienda/categoria/categoria.component';
-import { ArticuloComponent } from './tienda/articulo/articulo.component';
+import { ListaArticulosComponent } from './tienda/articulo/lista-articulos/lista-articulos.component';
+import { CardArticuloComponent } from './tienda/articulo/card-articulo/card-articulo.component';
+import { FichaArticuloComponent } from './tienda/articulo/ficha-articulo/ficha-articulo.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,9 @@ import { ArticuloComponent } from './tienda/articulo/articulo.component';
     TiendaComponent,
     BannersComponent,
     CategoriasComponent,
-    CategoriaComponent,
-    ArticuloComponent
+    ListaArticulosComponent,
+    CardArticuloComponent,
+    FichaArticuloComponent
   ],
   imports: [
     BrowserModule,

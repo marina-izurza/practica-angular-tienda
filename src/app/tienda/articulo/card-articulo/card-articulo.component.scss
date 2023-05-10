@@ -1,0 +1,41 @@
+.col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+        border: none;
+        margin: 20px;
+        position: relative;
+
+        .heart {
+            cursor: pointer;
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            width: 20px;
+        }
+
+        .precios {
+            display: flex;
+
+            :first-child {
+                color: grey;
+                font-size: 13px;
+                text-decoration: line-through;
+            }
+
+            :last-child {
+                color: red;
+                font-size: 17px;
+                font-weight: bold;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+h2 {
+    font-size: 50px;
+    text-align: center;
+}

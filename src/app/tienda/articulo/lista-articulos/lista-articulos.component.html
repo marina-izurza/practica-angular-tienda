@@ -1,0 +1,5 @@
+<h2>{{idCategoria | uppercase}}</h2>
+<div class="container">
+    <app-card-articulo *ngFor="let articulo of articulos" [articulo]="articulo" [boton]="'Añadir'"
+    (click)="goFicha(articulo.getId())"></app-card-articulo>
+</div>

@@ -17,6 +17,10 @@
             display: flex;
             font-size: 20px;
             font-weight: bold;
+
+            :first-of-type {
+                color: red;
+            }
             
             :last-child {
             color: gray;

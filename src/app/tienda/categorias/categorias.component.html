@@ -1,9 +1,8 @@
-<h2 class="text-center">Shop by Categorie</h2>
+<h2>Shop by Categorie</h2>
 
 <div class="container">
-    <div class="card" style="width: 18rem;" *ngFor="let item of items; let i=index">
-        <img [src]="item.imagen" class="card-img-top" alt="">
-        <p class="card-text">{{ item.descripcion }}</p>
-        <button (click)="goCategoria(item.descripcion)" type="button" class="btn btn-dark">Shop</button>
+    <div class="card" style="width: 14rem;" *ngFor="let item of items; let i=index">
+        <img [src]="item.imagen" class="card-img-top" alt="imagen categoria">
+        <button (click)="goCategoria(item.descripcion)" type="button" class="btn btn-light">{{ item.descripcion }}</button>
     </div>
 </div>

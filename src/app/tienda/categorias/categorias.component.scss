@@ -1,6 +1,8 @@
 h2 {
+    font-size: 50px;
     margin-top: 7rem;
-    padding-bottom: 2rem;
+    margin-left: 8rem;
+    padding-bottom: 1rem;
 }
 
 .container {
@@ -9,8 +11,8 @@ h2 {
     justify-content: space-around;
     margin-bottom: 10rem;
 
-    p {
-        font-size: 30px;
-        text-align: center;
+    button {
+        font-size: 20px;
+        font-weight: bold;
     }
 }

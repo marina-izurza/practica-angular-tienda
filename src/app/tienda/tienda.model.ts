@@ -1,7 +1,7 @@
 export class Tienda {
 
-    private idCategoria?: number
-    private idArticulo?: number
+    private idCategoria: number
+    private idArticulo: number
     private imagen?: string
     private descripcion?: string
 
@@ -9,15 +9,15 @@ export class Tienda {
         return this.idCategoria;
     }
 
-    public setIdCategoria(value: number | undefined) {
+    public setIdCategoria(value: number ) {
         this.idCategoria = value;
     }
 
-    public getIdArticulo(): number | undefined {
+    public getIdArticulo(): number {
         return this.idArticulo;
     }
 
-    public setIdArticulo(value: number | undefined) {
+    public setIdArticulo(value: number ) {
         this.idArticulo = value;
     }
 
@@ -38,8 +38,8 @@ export class Tienda {
     }
 
     constructor(
-        idCategoria?: number,
-        idArticulo?: number,
+        idCategoria: number,
+        idArticulo: number,
         imagen?: string,
         descripcion?: string
     ) {

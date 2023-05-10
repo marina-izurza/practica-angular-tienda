@@ -1,4 +1,4 @@
-.col {
+.container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -19,14 +19,14 @@
         .precios {
             display: flex;
 
-            .card-text:first-child {
+            :first-child {
                 color: grey;
                 font-size: 13px;
                 text-decoration: line-through;
             }
 
-            .card-text:last-child {
-                color: black;
+            :last-child {
+                color: red;
                 font-size: 17px;
                 font-weight: bold;
                 margin-left: 15px;
