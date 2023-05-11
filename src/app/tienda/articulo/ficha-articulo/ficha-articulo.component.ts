@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { unidadArticulo } from './ficha-articulo.model';
 import { FichaArticuloService } from './ficha-articulo.service';
 import { IUnidadArticulo } from './ficha-articulo.interface';
 import { ActivatedRoute } from '@angular/router';
@@ -29,7 +28,7 @@ export class FichaArticuloComponent implements OnInit {
       this.articulo = data;
     })
   }
-  gestionError(err: any) {throw new Error(err);}
+  gestionError(err: any) { throw new Error(err); }
 
   private getIdArticulo() {
     const id = this.route.snapshot.paramMap.get('idArticulo');

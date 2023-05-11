@@ -6,10 +6,10 @@
             <div class="card-body">
                 <h5 class="card-title">{{articulo.getNombre()}}</h5>
                 <div class="precios">
-                    <p class="card-text">{{articulo.getDescripcion() | currency:'EUR'}}</p>
-                    <p class="card-text">{{articulo.getPrecio() | currency:'EUR'}}</p>
+                    <p class="card-text reb">{{articulo.getDescripcion() | currency:'EUR':'symbol':'1.2-2':'es-ES'}}</p>
+                    <p class="card-text pb-3 real">{{articulo.getPrecio() | currency:'EUR':'symbol':'1.2-2':'es-ES'}}</p>
                 </div>
-                <a class="btn btn-primary" (click)="pulsarBoton()">{{ boton }}</a>
+                <a class="btn" (click)="pulsarBoton()">{{ boton }}</a>
             </div>
         </div>
     </div>

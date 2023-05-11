@@ -1,18 +1,24 @@
-h2 {
-    font-size: 50px;
-    margin-top: 7rem;
-    margin-left: 8rem;
-    padding-bottom: 1rem;
-}
+$green: rgb(82, 255, 94);
 
-.container {
-    align-items:center;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 10rem;
+.container-cat {
 
-    button {
-        font-size: 20px;
-        font-weight: bold;
+    h2 {
+        background-color: $green;
+        font-size: 50px;
+        margin-left: 8rem;
+        margin-bottom: 2rem;
+        display: inline-block;
+    }
+    
+    .container {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 4rem;
+    
+        button {
+            font-size: 20px;
+            font-weight: bold;
+        }
     }
 }

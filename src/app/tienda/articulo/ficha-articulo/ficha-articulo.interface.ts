@@ -1,5 +1,4 @@
 export interface IUnidadArticulo {
-
     id?: number
     nombre?: string
     precio?: number
@@ -7,5 +6,4 @@ export interface IUnidadArticulo {
     tallas?: string
     fav?: string
     imagen?: string
-    
 }

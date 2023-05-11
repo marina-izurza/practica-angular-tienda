@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { CurrencyPipe } from '@angular/common';
 import { UpperCasePipe } from '@angular/common';
+import localES from '@angular/common/locales/es';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localES);
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,6 +41,7 @@ import { FichaArticuloComponent } from './tienda/articulo/ficha-articulo/ficha-a
   ],
   providers: [
     CurrencyPipe,
+    { provide: LOCALE_ID, useValue: 'es-ES' },
     UpperCasePipe
   ],
   bootstrap: [AppComponent]

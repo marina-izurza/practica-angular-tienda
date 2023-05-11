@@ -1,3 +1,6 @@
+$green: rgb(82, 255, 94);
+$greenHover: rgb(134, 232, 140);
+
 .col {
     display: flex;
     flex-wrap: wrap;
@@ -16,26 +19,33 @@
             width: 20px;
         }
 
-        .precios {
-            display: flex;
+        .card-body {
+            padding: 0;
 
-            :first-child {
-                color: grey;
-                font-size: 13px;
-                text-decoration: line-through;
+            .precios {
+                display: flex;
+
+    
+                :first-child {
+                    color: black;
+                    font-size: 13px;
+                    text-decoration: line-through;
+                }
+    
+                :last-child {
+                    color: red;
+                    font-size: 17px;
+                    font-weight: bold;
+                }
             }
 
-            :last-child {
-                color: red;
-                font-size: 17px;
-                font-weight: bold;
-                margin-left: 15px;
+            .btn {
+                background-color: $green;
+            }
+
+            .btn:hover {
+                background-color: $greenHover;
             }
         }
     }
-}
-
-h2 {
-    font-size: 50px;
-    text-align: center;
 }

@@ -1,6 +1,3 @@
-
-<p>Identificador de artículo: {{idArticulo}}</p>
-
 <div class="container" *ngFor="let art of articulo">
     <div class="imagen">
         <img [src]="art.imagen" alt="" width="400px">
@@ -10,8 +7,8 @@
         <p class="sec">Shop from the same collection</p>
         <p class="sec">No comments</p>
         <div class="precio">
-            <p class="rebaja">{{art.precio| currency:'EUR'}}</p>
-            <p>{{art.descripcion| currency:'EUR'}}</p>
+            <p class="real">{{art.precio| currency:'EUR':'symbol':'1.2-2':'es-ES'}}</p>
+            <p class="reb">{{art.descripcion| currency:'EUR':'symbol':'1.2-2':'es-ES'}}</p>
         </div>
         <hr>
         <div class="color">
@@ -24,7 +21,7 @@
             <p class="sec">Sizes guide</p>
         </div>
         <div class="botones">
-            <a class="btn btn-lg btn-dark p-3">Add to the cart</a>
+            <a class="btn btn-lg">Add to the cart</a>
         </div>
         <p class="pt-3 sec">Add to the wishlist</p>
     </div>
